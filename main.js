@@ -1,3 +1,0 @@
-const susList  {}
-susList.suspects = [{}, {}, {}, {}];
-
