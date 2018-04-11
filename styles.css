@@ -36,6 +36,26 @@ nav img {
   background-color: grey;
 }
 
+/**************
+Main Content Styles
+******************/
+
+body {
+    background-color: lightgray;
+}
+
+h1, 
+h2 
+{
+    color:tomato;
+}
+
+h3, 
+h4 {
+    color: brown;
+}
+
+
 /***************
 Media Queries
 ******************/
