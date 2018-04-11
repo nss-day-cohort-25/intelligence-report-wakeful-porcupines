@@ -10,15 +10,16 @@ Header styles
 ******************/
 nav {
     height: 132px;
+    width: 100%;
     background-color: grey;
 }
 
 nav a {
     display: inline-block;
-    vertical-align: middle;
-    height: 133px;
     color: white;
     text-decoration: none;
+    padding: 10px;
+    margin-top: 50px;
     margin-left: .5em;
 }
 
@@ -31,7 +32,22 @@ nav a:active {
 }
 
 nav img {
-  display: inline-block;
+  float: left;
   background-color: grey;
 }
 
+/***************
+Media Queries
+******************/
+
+@media screen and (max-width: 748px) {
+    nav {
+        height: inherit;
+    }
+    nav img, nav a {
+        display: block;
+    }
+    nav a {
+        clear: both;
+    }
+};
