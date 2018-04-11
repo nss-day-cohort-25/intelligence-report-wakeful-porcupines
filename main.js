@@ -1,3 +1,3 @@
 const susList  {}
-susList.suspects = [];
+susList.suspects = [{}, {}, {}, {}];
 
