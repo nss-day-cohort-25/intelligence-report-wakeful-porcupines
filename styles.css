@@ -1,0 +1,37 @@
+/***************
+Global Styles
+****************/
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/***************
+Header styles
+******************/
+nav {
+    height: 132px;
+    background-color: grey;
+}
+
+nav a {
+    display: inline-block;
+    vertical-align: middle;
+    height: 133px;
+    color: white;
+    text-decoration: none;
+    margin-left: .5em;
+}
+
+nav a:hover {
+    color: orange;
+}
+
+nav a:active {
+    color: darkorange;
+}
+
+nav img {
+  display: inline-block;
+  background-color: grey;
+}
+
