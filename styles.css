@@ -2,7 +2,7 @@
 Global Styles
 ****************/
 * {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: "American Typewriter", Verdana, Geneva, Tahoma, sans-serif;
 }
 
 /***************
@@ -12,27 +12,26 @@ nav {
     display: flex; 
     flex-direction: column;
     align-items: center;
-    background-color: gray;
+    background-color: black;
 }
 
 nav ul {
     display: flex;
     flex-direction: column;
     width: 100%;
-    padding-left: 0;
-    margin: 5px 0;
+    padding: 0;
+    margin: 0;
 }
 
 nav ul li {
     list-style-type: none;
     text-align: center;
-    background-color: orange;
-    margin-bottom: 5px;
+    background-color: black;
+    ;
 }
 
 nav img {
-    width: 132px;
-    display: block;
+    display: none;
 }
 
 nav ul li a {
@@ -40,7 +39,7 @@ nav ul li a {
     color:white;
     font-weight: 700;
     text-decoration: none;
-    padding: 15px;
+    padding: 10px;
 }
 
 nav a:hover {
@@ -52,6 +51,7 @@ nav a:active {
 }
 
 
+
 /**************
 Main Content Styles
 ******************/
@@ -60,16 +60,30 @@ body {
     background-color: lightgray;
 }
 
+section,
+h1 {
+    margin: auto;
+}
+
 h1, 
 h2 
 {
-    color:tomato;
+    color:black;
 }
 
 h3, 
 h4 {
-    color: brown;
+    color: black;
 }
+
+h2 {
+    text-align: left;
+    padding-bottom: 60%;
+    font-size: 1.5em
+}
+
+
+
 
 
 /***************
@@ -81,7 +95,7 @@ Media Queries
         justify-content: space-between; 
         align-items: center;
         flex-direction: row;
-        height: 132px;
+        height: auto;
     }
     nav ul {
         flex-direction: row;
@@ -93,6 +107,12 @@ Media Queries
         margin-right: 10px;
     } 
     nav ul li a {
-        background-color:gray;
+        background-color:black;
+    }
+    nav img {
+        display: block;
+        height: 75px;
+        border-radius: 50%;
+        padding: 5px;
     }
 };
