@@ -1,0 +1,45 @@
+.newsSection {
+    display: inline-block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 20px;
+    border: solid black 2px;
+    width: 97%;
+    height: 250px;
+    vertical-align: top;
+    background-color: whitesmoke;
+    box-shadow: 5px 5px 5px black;
+}
+
+.event {
+    margin-top: 5px;
+    margin-bottom: 0px;
+    text-align: center;
+}
+
+.newsSection ul{
+    margin:0;
+    padding-left: 0;
+}
+
+.newsSection ul li {
+    margin-left: 25px;
+    margin-bottom: 5px;
+}
+
+
+.newsSection ul .Date {
+    margin-top: 0;
+    margin-left: inherit;
+    margin-bottom: 20px;
+    text-align: center;
+    list-style: none;
+    list-style-position: inside;
+}
+
+@media screen and (min-width: 566px) {
+    .newsSection {
+        margin-right: 10px;
+        width: 500px;
+    }
+}
