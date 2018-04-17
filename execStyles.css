@@ -8,11 +8,11 @@
 }
 
 .card img {
+    filter: grayscale(100%);
     width: 150px;
     height: 150px;
     border-radius:50%;
     border: solid 2px black;
-    float: left;
     margin: 10px;
 }
 
@@ -28,11 +28,6 @@ section li {
     list-style-type: none;
 }
 
-section img {
-    filter: grayscale(100%);
-    display: block;
-    align-self: middle;
-}
 section ul {
     padding: 0;  
 }
