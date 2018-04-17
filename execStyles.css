@@ -18,3 +18,13 @@ section li {
   
 }
 
+section img {
+    filter: grayscale(100%);
+}
+
+section h3,
+section ul {
+    padding-left: 50%;
+    
+}
+

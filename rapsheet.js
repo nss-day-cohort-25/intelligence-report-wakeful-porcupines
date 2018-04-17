@@ -4,6 +4,7 @@ const rapSheetDiv = document.getElementById("rapsheet")
 
 const addRapSheetToDom = () => {
     const rapsheetElement = document.createElement("article");
+    rapsheetElement.classList = "rapsheetCard";
     const header = document.createElement("h2");
     header.textContent = "Rap Sheet";
     rapsheetElement.appendChild(header);
