@@ -1,22 +1,40 @@
 const newsDB = JSON.parse(localStorage.getItem("newsDB"));
+const mainBody = document.querySelector("body")
+const newsArt = document.createElement("article")
 
 console.log(newsDB);
 
 function makeNewsFeed (newsFeed) {
+    const newsFragment = document.createDocumentFragment();
     newsFeed.forEach(e => {
+        let createdNewsList = addNewsToDOM("ul");
         for (key in e) {
-            console.log(key);
+            if (key === "event") {
+                let createdNewsSection = addNewsToDOM("section")
+                let createdNewsElement = addNewsToDOM("h2", e[key]);
+                createdNewsSection.appendChild(createdNewsElement);
+                createdNewsSection.appendChild(createdNewsList)
+                newsFragment.appendChild(createdNewsSection);
+            } else {
+                createdNewsElement = addNewsToDOM("li", e[key]);
+                createdNewsList.appendChild(createdNewsElement);
+            }
         }
-        
-    });
+       
+    })
+    return newsFragment;
 }
 
 function addNewsToDOM (newsTag, newsInfo, newsClass) {
-    const newsFragment = document.createDocumentFragment();
+    
     let newsElement = document.createElement(newsTag)
-    newsElement.classList = newsClass
-    newsElement.textContent = newsInfo
-    newsFragment.appendChild(newsElement)
+    if (newsClass) {
+        newsElement.classList = newsClass;
+    }
+    newsElement.textContent = newsInfo;
+    return newsElement;
 }
 
-makeNewsFeed(newsDB);
+const dbFrag = makeNewsFeed(newsDB)
+newsArt.appendChild(dbFrag);
+mainBody.appendChild(newsArt);

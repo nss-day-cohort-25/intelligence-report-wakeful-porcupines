@@ -13,7 +13,7 @@ const newsDB = [
         date: "April 7th, 2018",
         likelihood: 10,
         type: "Assasination",
-        victims: "Norville &quot;Shaggy&quot; Rogers, S. Doo",
+        victims: "Norville \"Shaggy\" Rogers, S. Doo",
         witnesses: "Fred Jones, Daphne Blake",
         Investigated: "FBI"
     }]
