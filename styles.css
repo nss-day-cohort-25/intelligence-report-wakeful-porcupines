@@ -86,6 +86,7 @@ Media Queries
     }
     nav ul {
         flex-direction: row;
+        width: inherit;
     }
     
     nav ul li {
