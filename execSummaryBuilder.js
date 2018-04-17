@@ -8,15 +8,17 @@ const execFragment = document.createDocumentFragment()
 const execSummaryBuilder = (name) => {
     const newCard = document.createElement('section')
     newCard.className = "card"
+    const titleContainer = document.createElement('div')
     for (key in name) {
         if (key === 'image') {
             const imgEl = document.createElement('img')
             imgEl.setAttribute('src', name[key])
-            newCard.appendChild(imgEl)
+            titleContainer.appendChild(imgEl)
         } else if (key === 'name') {
             const newName = document.createElement('h2')
             newName.textContent = name[key]
-            newCard.appendChild(newName) 
+            titleContainer.appendChild(newName) 
+            newCard.appendChild(titleContainer)
         } else {
             const newflexItem = document.createElement('div')
             newflexItem.className = "sectionElement"
