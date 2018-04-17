@@ -38,8 +38,39 @@
 }
 
 @media screen and (min-width: 566px) {
+    .newsArticle {
+        
+    }
+    
     .newsSection {
         margin-right: 10px;
         width: 500px;
     }
+
+    
+}
+
+@media screen and (min-width: 1043px) {
+    .newsArticle {
+        
+    }
+    
+    .newsSection:nth-child(2n) {
+        float: right;
+    }
+
+    
+}
+
+@media screen and (min-width: 1209px) {
+    .newsArticle {
+        
+    }
+    
+    .newsSection{
+        margin-left: 45px;
+        margin-right: 45px;
+    }
+
+    
 }

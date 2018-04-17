@@ -16,6 +16,15 @@ const newsDataBase = [
         Victims: "Norville \"Shaggy\" Rogers, S. Doo",
         Witnesses: "Fred Jones, Daphne Blake",
         Investigated: "FBI"
-    }]
+    },
+    {
+        event: "Politcal Rival Slandered",
+        Date: "April 1st, 2018",
+        Likelihood: 8,
+        Type: "Smear Campaign",
+        Victims: "B. Rubble",
+        Witnesses: "F. Flintstone",
+        Investigated: "NSA"
+}]
 
 localStorage.setItem("newsDB", JSON.stringify(newsDataBase));
