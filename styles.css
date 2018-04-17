@@ -9,18 +9,30 @@ Global Styles
 Header styles
 ******************/
 nav {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    flex-direction: row;
     height: 132px;
-    width: 100%;
     background-color: grey;
 }
 
-nav a {
-    display: inline-block;
+nav ul {
+    display: flex;
+    flex-direction: row;
+}
+
+nav ul li {
+    list-style-type: none;
+    text-align: center;
+    margin-right: 10px;
+}
+
+nav ul li a {
     color: white;
     text-decoration: none;
-    padding: 10px;
-    margin-top: 50px;
-    margin-left: .5em;
+    margin-right: 5px;
+    padding: 5px;
 }
 
 nav a:hover {
@@ -32,8 +44,6 @@ nav a:active {
 }
 
 nav img {
-  float: left;
-  background-color: grey;
 }
 
 /**************
