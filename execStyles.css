@@ -1,6 +1,7 @@
 .card {
     border: solid 5px black;
     width: 365px;
+    background-color: whitesmoke;
 }
 
 .card img {
@@ -14,5 +15,6 @@
 
 section li {
     list-style-type: none;
+  
 }
 
