@@ -1,8 +1,10 @@
 const newsDB = JSON.parse(localStorage.getItem("newsDB"));
 const mainBody = document.querySelector("body")
-const newsArt = document.createElement("div")
+const newsArt = document.createElement("article")
 newsArt.classList = "newsArticle"
-console.log(newsDB);
+const newsHeading = document.createElement("h2")
+newsHeading.textContent = "News Feed"
+newsArt.appendChild(newsHeading)
 
 function makeNewsFeed (newsFeed) {
     const newsFragment = document.createDocumentFragment();

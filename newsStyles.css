@@ -39,23 +39,28 @@
 
 @media screen and (min-width: 566px) {
     .newsArticle {
-        
+        display: block;
+        border: solid 5px black;
+        background-color: whitesmoke;
+        margin-top: 5px;
     }
     
     .newsSection {
         margin-right: 10px;
         width: 500px;
+        border: solid 5px black;
+        background-color: whitesmoke;
+        margin-top: 5px;
+        margin-bottom: 15px;
+        margin-left: 5px;
     }
 
     
 }
 
-@media screen and (min-width: 1043px) {
-    .newsArticle {
-        
-    }
+@media screen and (min-width: 1076px) {
     
-    .newsSection:nth-child(2n) {
+    .newsSection:nth-child(2n+1) {
         float: right;
     }
 
@@ -63,11 +68,7 @@
 }
 
 @media screen and (min-width: 1209px) {
-    .newsArticle {
-        
-    }
-    
-    .newsSection{
+   .newsSection{
         margin-left: 45px;
         margin-right: 45px;
     }
