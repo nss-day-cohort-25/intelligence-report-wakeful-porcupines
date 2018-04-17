@@ -1,22 +1,22 @@
 const newsDB = JSON.parse(localStorage.getItem("newsDB"));
 const mainBody = document.querySelector("body")
 const newsArt = document.createElement("article")
-
+newsArt.classList = "newsArticle"
 console.log(newsDB);
 
 function makeNewsFeed (newsFeed) {
     const newsFragment = document.createDocumentFragment();
     newsFeed.forEach(e => {
-        let createdNewsList = addNewsToDOM("ul");
+        let createdNewsList = addNewsToDOM("ul", "", "newsList");
         for (key in e) {
             if (key === "event") {
-                let createdNewsSection = addNewsToDOM("section")
-                let createdNewsElement = addNewsToDOM("h2", e[key]);
+                let createdNewsSection = addNewsToDOM("section", "", "newsSection")
+                let createdNewsElement = addNewsToDOM("h2", e[key], key);
                 createdNewsSection.appendChild(createdNewsElement);
                 createdNewsSection.appendChild(createdNewsList)
                 newsFragment.appendChild(createdNewsSection);
             } else {
-                createdNewsElement = addNewsToDOM("li", e[key]);
+                createdNewsElement = addNewsToDOM("li", `${key}: ${e[key]}`, key);
                 createdNewsList.appendChild(createdNewsElement);
             }
         }
