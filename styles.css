@@ -9,32 +9,48 @@ Global Styles
 Header styles
 ******************/
 nav {
-    height: 132px;
-    width: 100%;
-    background-color: grey;
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    background-color: gray;
 }
 
-nav a {
-    display: inline-block;
-    color: white;
+nav ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-left: 0;
+    margin: 5px 0;
+}
+
+nav ul li {
+    list-style-type: none;
+    text-align: center;
+    background-color: orange;
+    margin-bottom: 5px;
+}
+
+nav img {
+    width: 132px;
+    display: block;
+}
+
+nav ul li a {
+    display: block;
+    color:white;
+    font-weight: 700;
     text-decoration: none;
-    padding: 10px;
-    margin-top: 50px;
-    margin-left: .5em;
+    padding: 15px;
 }
 
 nav a:hover {
-    color: orange;
+    color: brown;
 }
 
 nav a:active {
     color: darkorange;
 }
 
-nav img {
-  float: left;
-  background-color: grey;
-}
 
 /**************
 Main Content Styles
@@ -60,14 +76,23 @@ h4 {
 Media Queries
 ******************/
 
-@media screen and (max-width: 748px) {
+@media screen and (min-width: 566px) {
     nav {
-        height: inherit;
+        justify-content: space-between; 
+        align-items: center;
+        flex-direction: row;
+        height: 132px;
     }
-    nav img, nav a {
-        display: block;
+    nav ul {
+        flex-direction: row;
+        width: inherit;
     }
-    nav a {
-        clear: both;
+    
+    nav ul li {
+        text-align: center;
+        margin-right: 10px;
+    } 
+    nav ul li a {
+        background-color:gray;
     }
 };
