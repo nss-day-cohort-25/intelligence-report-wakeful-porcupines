@@ -1,16 +1,51 @@
 const finDatabase = JSON.parse(localStorage.getItem('financialCrimes'))
 
-/*const loadDatabase = function (localStorageKey) {
-    // Get the string version of the database
-    const databaseString = localStorage.getItem(localStorageKey)
+const targetArticle = document.querySelector("#profileViewer")
 
-    // Use JSON.parse() to convert the string back into an object
-    return JSON.parse(databaseString)
-}*/
-// Create a document fragment to contain components
 const fragment = document.createDocumentFragment()
 
 
+
+//Function to build a summary card.
+
+const summaryCardBuilder = (name) => {
+    const newCard = document.createElement("section")
+    // give the newCard section a class name of card
+    newCard.className = "card"
+    for(key in name) {
+        if (key === "name"){
+            const newHeading = document.createElement("h3")
+            newHeading.textContent = database[key]
+            newCard.appendChild(newName)
+        } else {
+            const newValue = document.createElement("h3")
+            newValue.textContent = key
+            newCard.appendChild(newValue)
+            const newList = document.createElement("ul")
+            name[key].forEach(
+                function(currentIndex){
+                    const newListItem = document.createElement("li")
+                    newListItem.textContent = currentIndex
+                    newList.appendChild(newListItem)
+                })
+            newCard.appendChild(newList)
+        }
+    }
+    fragment.appendChild(newCard)
+}
+
+summaryCardBuilder(finDatabase)
+
+targetArticle.appendChild(fragment)
+
+
+
+//document.querySelector("#financialInterests").appendChild(fragment)
+/* Create a function that make a section 
+
+*/
+
+/*
 // Creating a bank account h3 heading
 const bankAccounts = document.createElement("h3")
 //Add a class
@@ -57,6 +92,7 @@ for(property in finDatabase["Black Mailed"]){
 fragment.appendChild(listThree)
 
 
+
 //Creating a believed money laundering business heading
 const moneyLaund = document.createElement("h3")
 //Add a class
@@ -70,5 +106,9 @@ for(property in finDatabase["Money Laundering Businesses"]){
     listFour.appendChild(listItem)
 }
 fragment.appendChild(listFour)
+*/
 
-document.querySelector("#financialInterests").appendChild(fragment)
+
+/* Future section
+document.querySelector("#profileViewer").appendChild(fragment)
+*/
