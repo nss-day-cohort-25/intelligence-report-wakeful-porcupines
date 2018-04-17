@@ -1,6 +1,6 @@
 const finDatabase = JSON.parse(localStorage.getItem('financialCrimes'))
 
-const targetArticle = document.querySelector("#profileViewer")
+const financeArticle = document.querySelector("#financeProfileViewer")
 
 const fragment = document.createDocumentFragment()
 
@@ -36,7 +36,7 @@ const summaryCardBuilder = (name) => {
 
 summaryCardBuilder(finDatabase)
 
-targetArticle.appendChild(fragment)
+financeArticle.appendChild(fragment)
 
 
 
