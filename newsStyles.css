@@ -1,13 +1,10 @@
-.newsArticle {
-    
-}
-
 .newsSection {
     display: inline-block;
-    margin-right: 10px;
+    margin-right: auto;
+    margin-left: auto;
     margin-top: 20px;
     border: solid black 2px;
-    width: 500px;
+    width: 97%;
     height: 250px;
     vertical-align: top;
     background-color: whitesmoke;
@@ -38,4 +35,11 @@
     text-align: center;
     list-style: none;
     list-style-position: inside;
+}
+
+@media screen and (min-width: 566px) {
+    .newsSection {
+        margin-right: 10px;
+        width: 500px;
+    }
 }
