@@ -1,0 +1,32 @@
+.rapsheet div {
+    display: inline-block;
+    height: 100%;
+}
+
+
+
+
+
+@media (min-width: 566px) {
+    .rapsheet li {
+        margin-top: 8px;
+        font-size: .75em;
+    }
+
+    .rapsheet ul {
+        margin-left: 10px;
+    }
+
+    .rapsheet h3 {
+        font-size: .8em;
+    }
+    
+
+}
+
+@media (min-width: 792px) {
+    .rapsheet ul {
+        
+        justify-content: space-around;
+    }
+}

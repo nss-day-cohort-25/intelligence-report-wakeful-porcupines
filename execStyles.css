@@ -36,6 +36,7 @@ section ul {
     .card {
         flex-direction: row;
         align-items: flex-start;
+        justify-content: space-evenly
     }
     .sectionElement {
         margin-right: 10px;
