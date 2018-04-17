@@ -1,7 +1,10 @@
 .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     border: solid 5px black;
-    width: 365px;
     background-color: whitesmoke;
+    margin-top: 5px;
 }
 
 .card img {
@@ -13,18 +16,24 @@
     margin: 10px;
 }
 
+.sectionElement {
+    border: solid 1px black;
+}
+section,
+h2 {
+    text-align: center;
+}
+
 section li {
     list-style-type: none;
-  
 }
 
 section img {
     filter: grayscale(100%);
+    display: block;
+    align-self: middle;
 }
-
-section h3,
 section ul {
-    padding-left: 50%;
-    
+    padding: 0;  
 }
 

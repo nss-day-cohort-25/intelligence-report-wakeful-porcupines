@@ -18,9 +18,12 @@ const execSummaryBuilder = (name) => {
             newName.textContent = name[key]
             newCard.appendChild(newName) 
         } else {
+            const newflexItem = document.createElement('div')
+            newflexItem.className = "sectionElement"
+            newCard.appendChild(newflexItem)
             const newHeading = document.createElement("h3")
             newHeading.textContent = key
-            newCard.appendChild(newHeading)
+            newflexItem.appendChild(newHeading)
             const newList = document.createElement('ul')
             name[key].forEach(
                 function (currentIndex) {
@@ -28,7 +31,7 @@ const execSummaryBuilder = (name) => {
                     newListItem.textContent = currentIndex
                     newList.appendChild(newListItem)
                 })
-            newCard.appendChild(newList)
+            newflexItem.appendChild(newList)
         }
     }
     execFragment.appendChild(newCard)
