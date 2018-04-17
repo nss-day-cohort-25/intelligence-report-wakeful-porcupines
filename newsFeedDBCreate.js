@@ -1,4 +1,4 @@
-const newsDB = [
+const newsDataBase = [
     {
         event: "Horse Doping Ring Exposed",
         date: "April 2nd, 2018",
@@ -18,4 +18,4 @@ const newsDB = [
         Investigated: "FBI"
     }]
 
-localStorage.setItem("newsDB", JSON.stringify(newsDB));
+localStorage.setItem("newsDB", JSON.stringify(newsDataBase));
