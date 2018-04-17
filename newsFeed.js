@@ -1,6 +1,6 @@
 const newsDB = JSON.parse(localStorage.getItem("newsDB"));
 const mainBody = document.querySelector("body")
-const newsArt = document.createElement("article")
+const newsArt = document.createElement("div")
 newsArt.classList = "newsArticle"
 console.log(newsDB);
 
@@ -20,7 +20,6 @@ function makeNewsFeed (newsFeed) {
                 createdNewsList.appendChild(createdNewsElement);
             }
         }
-       
     })
     return newsFragment;
 }
