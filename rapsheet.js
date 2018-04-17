@@ -1,16 +1,17 @@
 const retrievedRapSheetDataBase = JSON.parse(localStorage.getItem("rapSheet"));
 
-const rapSheetDiv = document.getElementById("rapsheet")
+const rapSheetArticle = document.getElementById("rapsheet")
+const indexGetter = document.getElementById("profileViewer")
 
 const addRapSheetToDom = () => {
-    const rapsheetElement = document.createElement("article");
-    rapsheetElement.classList = "rapsheetCard";
+    const rapsheetElement = document.createElement("section");
+    rapsheetElement.classList = "card rapsheet";
     const header = document.createElement("h2");
     header.textContent = "Rap Sheet";
     rapsheetElement.appendChild(header);
 
     for (property in retrievedRapSheetDataBase) {
-        const sectionElement = document.createElement("section");
+        const sectionElement = document.createElement("div");
         const propertyHeading = document.createElement("h3")
         propertyHeading.textContent = property + ":";
         sectionElement.appendChild(propertyHeading)
@@ -25,7 +26,7 @@ const addRapSheetToDom = () => {
         sectionElement.appendChild(listElement);
         rapsheetElement.appendChild(sectionElement);
     }
-    rapSheetDiv.appendChild(rapsheetElement);
+    rapSheetArticle.appendChild(rapsheetElement);
 }
 
 
