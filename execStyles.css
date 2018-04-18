@@ -32,7 +32,7 @@ section ul {
 }
 
 
-@media screen and (min-width: 566px) {
+@media screen and (min-width: 605px) {
     .card {
         flex-direction: row;
         align-items: flex-start;
