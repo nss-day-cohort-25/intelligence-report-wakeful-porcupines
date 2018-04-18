@@ -44,7 +44,7 @@ nav ul li a {
 }
 
 nav a:hover {
-    color: brown;
+    color: orange;
 }
 
 nav a:active {
@@ -81,9 +81,6 @@ h2 {
     text-align: left;
     font-size: 1.5em
 }
-
-
-
 
 
 /***************
