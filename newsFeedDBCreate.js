@@ -18,7 +18,7 @@ const newsDataBase = [
         Investigated: "FBI"
     },
     {
-        event: "Politcal Rival Slandered",
+        event: "Political Rival Slandered",
         Date: "April 1st, 2018",
         Likelihood: 8,
         Type: "Smear Campaign",
