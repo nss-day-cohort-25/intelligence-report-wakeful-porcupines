@@ -1,7 +1,7 @@
 const newsDB = JSON.parse(localStorage.getItem("newsDB"));
 const mainBody = document.querySelector("body")
 const newsArt = document.createElement("article")
-newsArt.classList = "newsArticle"
+newsArt.id = "newsArticle"
 const newsHeading = document.createElement("h2")
 newsHeading.textContent = "News Feed"
 newsArt.appendChild(newsHeading)

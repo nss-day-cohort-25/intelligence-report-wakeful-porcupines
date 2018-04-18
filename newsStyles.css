@@ -5,10 +5,18 @@
     margin-top: 20px;
     border: solid black 2px;
     width: 97%;
+    margin-left: 3px;
     height: 250px;
     vertical-align: top;
     background-color: whitesmoke;
-    box-shadow: 5px 5px 5px black;
+    box-shadow: 10px 10px 10px black;
+}
+
+#newsArticle {
+    display: block;
+    border: solid 5px black;
+    background-color: whitesmoke;
+    margin-top: 5px;
 }
 
 .event {
@@ -38,7 +46,7 @@
 }
 
 @media screen and (min-width: 566px) {
-    .newsArticle {
+    #newsArticle {
         display: block;
         border: solid 5px black;
         background-color: whitesmoke;
