@@ -73,9 +73,49 @@ const editNewsItem = (name, event, key, value) => {
  ***************************/
 
 //function to clear a viewer element of its data:
-const domClear = (elementID) => {
-    document.getElementById(elementID).innerHTML = ''
+const domClear = (elementID) => {document.getElementById(elementID).innerHTML = ''}
+
+//function to build summary element 
+
+const  = (tag, text) => {
+    const newEl = document.createElement(tag);
+    newEl.textContent = text
+    return newEl
 }
+
+//function to build an executive summary card 
+const execSummaryBuilder = (name, targetId) => {
+    const targetArticle = document.querySelector(targetId) 
+    const execFragment = document.createDocumentFragment()
+    const newCard = document.createElement('section')
+    newCard.className = "card"
+    const titleContainer = document.createElement('div')
+    for (key in villainDatabase[name]) {
+        if (key === 'image') {
+            const imgEl = document.createElement('img')
+            imgEl.setAttribute('src', name[key])
+            titleContainer.appendChild(imgEl)
+        } else if (key === 'title') {
+            const newTitle = buildTextElement('h2', '', villainDatabase[name][key])
+            titleContainer.appendChild(newTitle)
+        } else {
+            const newFlexItem = buildTextElement('div', 'sectionElement', newCard '')
+            newCard.appendChild(newFlexItem)
+            const newHeading =  buildTextElement('h3', '', key)
+            newflexItem.appendChild(newHeading)
+            const newList = document.createElement('ul')
+            name[key].forEach(
+                function (currentIndex) {
+                    const newListItem = buildTextElement('li', '', currentIndex)
+                    newList.appendChild(newListItem)
+                })
+            newflexItem.appendChild(newList)
+        }
+    }
+    execFragment.appendChild(newCard)
+    targetArticle.appendChild(execFragment)
+}
+
 
 
 
