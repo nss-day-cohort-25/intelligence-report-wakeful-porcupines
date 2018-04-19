@@ -38,8 +38,8 @@ nav img {
 nav ul li a {
     display: block;
     color:white;
-    font-weight: 700;
     text-decoration: none;
+    letter-spacing: 2px;
     padding: 10px;
 }
 

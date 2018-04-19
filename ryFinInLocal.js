@@ -1,51 +1,53 @@
 const finDatabase = JSON.parse(localStorage.getItem('financialCrimes'))
 
-const financeArticle = document.querySelector("#financeProfileViewer")
+execSummaryBuilder(finDatabase, "#financeProfileViewer")
 
-const fragment = document.createDocumentFragment()
+// const financeArticle = document.querySelector("#financeProfileViewer")
 
-
-
-//Function to build a summary card.
-
-const summaryCardBuilder = (name) => {
-    const newCard = document.createElement("section")
-    newCard.classList = "card ryFinIn" 
-    const mainHeading = document.createElement("h2")
-    mainHeading.textContent = "Financial Information"
-    newCard.appendChild(mainHeading)
-    for(key in name) {
-        if (key === "name"){
-            const newHeading = document.createElement("h3")
-            newHeading.textContent = database[key]
-            newCard.appendChild(newName)
-        } else {
-            const finDiv = document.createElement("div")
-            finDiv.classList = "finDiv"
-            const newValue = document.createElement("h3")
-            newValue.textContent = key
-            const newList = document.createElement("ul")
-            name[key].forEach(
-                function(currentIndex){
-                    const newListItem = document.createElement("li")
-                    newListItem.textContent = currentIndex
-                    newList.appendChild(newListItem)
-                })
-                //Adds the new list to the card
-            finDiv.appendChild(newValue)
-            finDiv.appendChild(newList)
-            newCard.appendChild(finDiv)
-        }
-    }
-    // Adds the card components to the fragment
-    fragment.appendChild(newCard)
-}
-//Calls the function with finDatabase called too it
-summaryCardBuilder(finDatabase)
+// const fragment = document.createDocumentFragment()
 
 
-//Appending child fragment to the finance article
-financeArticle.appendChild(fragment)
+
+// //Function to build a summary card.
+
+// const summaryCardBuilder = (name) => {
+//     const newCard = document.createElement("section")
+//     newCard.classList = "card ryFinIn" 
+//     const mainHeading = document.createElement("h2")
+//     mainHeading.textContent = "Financial Information"
+//     newCard.appendChild(mainHeading)
+//     for(key in name) {
+//         if (key === "name"){
+//             const newHeading = document.createElement("h3")
+//             newHeading.textContent = database[key]
+//             newCard.appendChild(newName)
+//         } else {
+//             const finDiv = document.createElement("div")
+//             finDiv.classList = "finDiv"
+//             const newValue = document.createElement("h3")
+//             newValue.textContent = key
+//             const newList = document.createElement("ul")
+//             name[key].forEach(
+//                 function(currentIndex){
+//                     const newListItem = document.createElement("li")
+//                     newListItem.textContent = currentIndex
+//                     newList.appendChild(newListItem)
+//                 })
+//                 //Adds the new list to the card
+//             finDiv.appendChild(newValue)
+//             finDiv.appendChild(newList)
+//             newCard.appendChild(finDiv)
+//         }
+//     }
+//     // Adds the card components to the fragment
+//     fragment.appendChild(newCard)
+// }
+// //Calls the function with finDatabase called too it
+// summaryCardBuilder(finDatabase)
+
+
+// //Appending child fragment to the finance article
+// financeArticle.appendChild(fragment)
 
 
 //Original Code

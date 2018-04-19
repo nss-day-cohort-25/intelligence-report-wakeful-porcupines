@@ -1,11 +1,9 @@
 const execSumLocal = JSON.parse(localStorage.getItem('execSum'))
 
-const targetArticle = document.querySelector('#profileViewer') 
-
-const execFragment = document.createDocumentFragment()
-
 //function to build a executive summary card based on user input of name
-const execSummaryBuilder = (name) => {
+const execSummaryBuilder = (name, targetId) => {
+    const targetArticle = document.querySelector(targetId) 
+    const execFragment = document.createDocumentFragment()
     const newCard = document.createElement('section')
     newCard.className = "card"
     const titleContainer = document.createElement('div')
@@ -14,7 +12,7 @@ const execSummaryBuilder = (name) => {
             const imgEl = document.createElement('img')
             imgEl.setAttribute('src', name[key])
             titleContainer.appendChild(imgEl)
-        } else if (key === 'name') {
+        } else if (key === 'title') {
             const newName = document.createElement('h2')
             newName.textContent = name[key]
             titleContainer.appendChild(newName) 
@@ -37,11 +35,13 @@ const execSummaryBuilder = (name) => {
         }
     }
     execFragment.appendChild(newCard)
+    targetArticle.appendChild(execFragment)
 }
 
-execSummaryBuilder(execSumLocal)
 
-targetArticle.appendChild(execFragment)
+execSummaryBuilder(execSumLocal, '#profileViewer')
+
+
 
 
 

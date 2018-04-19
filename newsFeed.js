@@ -1,4 +1,5 @@
 const newsDB = JSON.parse(localStorage.getItem("newsDB"));
+
 const mainBody = document.querySelector("body")
 const newsArt = document.createElement("article")
 newsArt.id = "newsArticle"
@@ -38,4 +39,6 @@ function addNewsToDOM (newsTag, newsInfo, newsClass) {
 
 const dbFrag = makeNewsFeed(newsDB)
 newsArt.appendChild(dbFrag);
-mainBody.appendChild(newsArt);
+mainBody.appendChild(newsArt)
+
+

@@ -1,5 +1,6 @@
 // Database of Finical Crime information
 const financialCrimes = {
+    'title': "Financial Interests",
     "Bank Accounts" : [10021965, 10091965, 10161965, 10231965],
     "Businesses" : [" Wolf in Cheap Cheap Clothing", "Royal Runaround", "Yellow Pinkie", "Five is a Crowd"],
     "Black Mailed" : ["Sub Swiper", "Masked Granny", "Robin Hood", "Capitan Kidd"],
